@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <div class="container" style="text-align: center;">
-        
-        <header class="jumbotron" style="background-color:#2f9e41; color:white;">
-            <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
-            <p>Campus Machado </p>
-            <p> Matheus Franco </p>
-       </header>
-       <div class="load-image">
-        <img id="preview" src="image1.png" width="250" alt="" />
-      </div>
-      <div class="send-image">
-        <label for="image_ts">
-          <p id="location-src">Clique para adicionar sua imagem</p>
-          <input
-            type="file"
-            name="image"
-            id="image_ts"
-            onchange="previewImage()"
-          />
-        </label>
-        <div id="button"><button class="btn" onclick="init()">Enviar</button></div>
-        <div id="loading" class="c-loader"></div>
+  <header class="header">
+    <div class="container-header">
+      <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
+      <p>Campus Machado<br>Matheus Franco </p>
     </div>
-    
-    <div class="display-4"  id="label-container"></div>
-    <div class="display-6"  id="label-container-menor"></div>
-     
-     <script src="script.js"></script>   
+  </header>
+  <main class="main">
+    <div class="container-main"></div>
+    <div class="load-image">
+      <img id="preview" src="image1.png" alt="" />
+    </div>
+    <div class="send-image">
+      <label for="image_ts">
+        <p id="location-src">Clique para adicionar sua imagem</p>
+        <input type="file" name="image" id="image_ts" onchange="previewImage()" />
+      </label>
+      <div id="button">
+        <button class="btn" onclick="init()">Enviar</button>
+      </div>
+      <div id="loading" class="c-loader"></div>
+    </div>
+    <div class="text-display">
+      <div class="display-4" id="label-container"></div>
+      <div class="display-6" id="label-container-menor"></div>
+    </div>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <footer class="panel-footer" style="text-align:center; background-color:#2f9e41; color:white;"> 
-        Todos direitos reservados - Departamento de Computação - IFSULDEMINAS - Campus Machado
-    </footer>  
-    </div>   
+  </main>
+  <footer class="footer">
+    Todos direitos reservados - Departamento de Computação - IFSULDEMINAS - Campus Machado
+  </footer>
 </body>
+
 </html>
